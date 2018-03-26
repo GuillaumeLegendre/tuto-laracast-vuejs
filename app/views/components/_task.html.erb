@@ -1,0 +1,6 @@
+<script id="task-template" type="text/x-template">
+  <li v-show="isVisible">
+    <slot></slot>
+    <button @click="hideTask">X</button>
+  </li>
+</script>

@@ -1,0 +1,17 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.css" />
+
+<div id="vue-app">
+  <message title="component of a component" body="this component contain the component message of the library css bulma. No need to learn all the synthax"></message>
+  <message title="Yeah baby ! Awesome !" body="You just need to add an html tag message and you are good to go"></message>
+</div>
+
+<!-- VUEJS TEMPLATES -->
+<%= render partial: 'components/message' %>
+
+<script type="text/javascript">
+  document.addEventListener('turbolinks:load', () => {
+    const message = new Vue({
+      el: "#vue-app"
+    })
+  })
+</script>

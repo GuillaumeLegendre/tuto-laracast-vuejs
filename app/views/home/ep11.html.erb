@@ -1,0 +1,28 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.css" />
+
+
+<div id="vue-app">
+  <tabs>
+    <tab name="tab1" :selected="true">
+      <h1>Here is the content for the tab1.</h1>
+    </tab>
+    <tab name="tab2">
+      <h1>Here is the content for the tab2.</h1>
+    </tab>
+    <tab name="tab3">
+      <h1>Here is the content for the tab3.</h1>
+    </tab>
+  </tabs>
+</div>
+
+<!-- VUEJS TEMPLATES -->
+<%= render partial: 'components/tabs' %>
+<%= render partial: 'components/tab' %>
+
+<script type="text/javascript">
+  document.addEventListener('turbolinks:load', () => {
+    new Vue({
+      el: "#vue-app",
+    })
+  })
+</script>

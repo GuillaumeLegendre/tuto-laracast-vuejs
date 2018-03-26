@@ -1,0 +1,26 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.css" />
+
+
+<div id="vue-app">
+  <modal v-if="showModal" @close="showModal = false">
+    <div class="box">
+      Hello
+    </div>
+  </modal>
+  <button @click="showModal = true">Show modal</button>
+</div>
+
+<!-- VUEJS TEMPLATES -->
+<%= render partial: 'components/modal' %>
+
+<script type="text/javascript">
+  document.addEventListener('turbolinks:load', () => {
+    new Vue({
+      el: "#vue-app",
+
+      data: {
+        showModal: false
+      }
+    })
+  })
+</script>

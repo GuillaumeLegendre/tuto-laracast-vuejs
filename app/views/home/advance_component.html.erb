@@ -1,0 +1,15 @@
+<div id="vue-app">
+  <task-list></task-list>
+</div>
+
+<!-- VUEJS TEMPLATES -->
+<%= render partial: 'components/task' %>
+<%= render partial: 'components/task_list' %>
+
+<script type="text/javascript">
+  document.addEventListener('turbolinks:load', () => {
+    const taskList = new Vue({
+      el: "#vue-app"
+    })
+  })
+</script>

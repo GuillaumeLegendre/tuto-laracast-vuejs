@@ -1,0 +1,18 @@
+<div id="vue-app">
+  <board>
+    This text has been put between the html board element
+    <button>You can even put html</button>
+    with the tag &lt;slot&gt;
+  </board>
+</div>
+
+<!-- VUEJS TEMPLATES -->
+<%= render partial: 'components/board' %>
+
+<script type="text/javascript">
+  document.addEventListener('turbolinks:load', () => {
+    const app = new Vue({
+      el: "#vue-app"
+    })
+  })
+</script>

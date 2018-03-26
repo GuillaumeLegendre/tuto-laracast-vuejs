@@ -1,0 +1,50 @@
+<script id="board-template" type="text/x-template">
+  <div>
+    <input type="text" id="input" v-model="message"></input>
+    <p>{{ message }}</p>
+
+    <hr/>
+
+    <input type="text" id="input-new-name" v-model="newName"/>
+    <button id="trigger-add-name">add old way</button>
+    <button v-on:click="addName">add new way</button>
+    <button @click="addName">add new way with shortcut</button>
+    <ul>
+      <li v-for="name in names">{{ name }}</li>
+    </ul>
+
+    <hr/>
+
+    <button v-bind:title="buttonTitle">hover me for title</button>
+    <button :title="buttonTitle">hover me for title</button>
+    <button :class="{ 'blue': isLoading }" @click="toggleClass">click on me for class binding</button>
+
+    <hr/>
+
+    <p>{{ reversedMessage }}</p>
+
+    <h1>incomplete tasks</h1>
+    <ul>
+      <li v-for="task in incompletedTasks" v-text="task.description"></li>
+    </ul>
+
+    <h1>complete tasks</h1>
+    <ul>
+      <li v-for="task in completedTasks" v-text="task.description"></li>
+    </ul>
+
+    <hr/>
+
+    <p>
+      <slot></slot>
+    </p>
+
+    <hr/>
+
+
+  </div>
+</script>
+
+<style>
+  .blue{ color: blue;}
+</style>

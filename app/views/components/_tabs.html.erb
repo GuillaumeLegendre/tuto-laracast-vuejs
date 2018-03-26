@@ -1,0 +1,15 @@
+<script id="tabs-template" type="text/x-template">
+  <div>
+    <div class="tabs">
+      <ul>
+        <li v-for="tab in tabs" :class="{ 'is-active': tab.isActive }">
+          <a :href="tab.href" @click="selectTab(tab)" data-turbolinks="false">{{ tab.name }}</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="tabs-details">
+      <slot></slot>
+    </div>
+  </div>
+</script>
